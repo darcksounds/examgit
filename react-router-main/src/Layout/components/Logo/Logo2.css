@@ -1,0 +1,16 @@
+.logo_box2 {
+    width: 55rem;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.8s;
+    box-shadow: 0 0 5rem rgba(255, 77, 141,0.4);
+}
+.logo_box2:hover {
+   transform: scale(1.05);
+}
+.logo2 {
+    width: 100%;
+    object-fit: cover;
+}

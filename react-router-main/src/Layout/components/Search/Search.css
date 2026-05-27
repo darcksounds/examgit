@@ -1,0 +1,18 @@
+
+.Search_box{
+display: flex;
+justify-content: center;
+align-items: center;
+border: 1px solid #444;
+border-radius: 2rem;
+padding: 0.5rem;
+
+}
+.Search_box input[type="search"]{
+border: none;
+outline: none;
+padding-left: 1rem;
+}
+.Search_svg{
+ width: 24px;
+}

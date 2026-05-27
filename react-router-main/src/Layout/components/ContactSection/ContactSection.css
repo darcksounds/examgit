@@ -1,0 +1,83 @@
+.contact_section {
+    max-width: 800px;
+    margin: 60px auto;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.contact_section h2 {
+    font-size: 3.2rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.phone_text {
+    color: rgb(255, 77, 141);
+}
+
+.chat_text {
+    color: #d4af37;
+}
+
+.contact_section p {
+    font-size: 1.5rem;
+    color: gray;
+    margin-bottom: 30px;
+}
+
+.contact_card {
+    border: 1px solid rgba(0,0,0,0.1);
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+
+.contact_phone {
+    font-size: 3rem;
+    font-weight: 700;
+    color: rgb(255, 77, 141);
+    margin-bottom: 24px;
+}
+
+.contact_buttons {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin-bottom: 20px;
+}
+
+.btn_call, .btn_whatsapp, .btn_viber {
+    padding: 14px 28px;
+    border-radius: 30px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+    transition: transform 0.2s ease;
+}
+
+.btn_call {
+    background: linear-gradient(90deg, rgb(255, 77, 141), #d4af37);
+    color: white;
+}
+
+.btn_whatsapp {
+    background: #25D366;
+    color: white;
+}
+
+.btn_viber {
+    background: #7360F2;
+    color: white;
+}
+
+.btn_call:hover, .btn_whatsapp:hover, .btn_viber:hover {
+    transform: translateY(-3px);
+}
+
+.contact_available {
+    font-size: 1.3rem;
+    color: #aaa;
+    margin-bottom: 0;
+}

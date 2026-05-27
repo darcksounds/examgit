@@ -1,0 +1,156 @@
+{
+    "products": [
+        {
+            "id": 1,
+            "title": "Elegant Beige Handbag",
+            "category": "bags",
+            "price": 120,
+            "collection": "Spring 2026",
+            "image": "/Images/bags/bag1.jfif",
+            "description": "Minimal elegant handbag for everyday style"
+        },
+        {
+            "id": 2,
+            "title": "Classic Black Leather Bag",
+            "category": "bags",
+            "price": 180,
+            "collection": "Premium",
+            "image": "/Images/bags/bag2.jfif",
+            "description": "Luxury leather bag with gold details"
+        },
+        {
+            "id": 3,
+            "title": "Pink Mini Crossbody",
+            "category": "bags",
+            "price": 90,
+            "collection": "Summer Drop",
+            "image": "/Images/bags/bag3.jfif",
+            "description": "Trendy mini bag for casual outfits"
+        },
+        {
+            "id": 4,
+            "title": "Oversized Tote Bag",
+            "category": "bags",
+            "price": 140,
+            "collection": "Daily Essentials",
+            "image": "/Images/bags/bag4.jpg",
+            "description": "Spacious tote bag for daily use"
+        },
+        {
+            "id": 5,
+            "title": "Luxury Handbag",
+            "category": "bags",
+            "price": 200,
+            "collection": "Premium",
+            "image": "/Images/bags/bag5.png",
+            "description": "Premium luxury handbag"
+        },
+        {
+            "id": 6,
+            "title": "Casual Bag",
+            "category": "bags",
+            "price": 110,
+            "collection": "Basics",
+            "image": "/Images/bags/bag6.jfif",
+            "description": "Casual everyday bag"
+        },
+        {
+            "id": 7,
+            "title": "Stylish Bag",
+            "category": "bags",
+            "price": 160,
+            "collection": "Spring 2026",
+            "image": "/Images/bags/bag7.jpg",
+            "description": "Stylish bag for any occasion"
+        },
+        {
+            "id": 8,
+            "title": "Mini Bag",
+            "category": "bags",
+            "price": 85,
+            "collection": "Summer Drop",
+            "image": "/Images/bags/bag8.jfif",
+            "description": "Cute mini bag"
+        },
+        {
+            "id": 9,
+            "title": "White Basic T-shirt",
+            "category": "tshirts",
+            "price": 40,
+            "collection": "Basics",
+            "sizes": ["S", "M", "L", "XL"],
+            "image": "/Images/tshirts/tshirt1.jpg",
+            "description": "Comfortable cotton t-shirt"
+        },
+        {
+            "id": 10,
+            "title": "Black Oversized T-shirt",
+            "category": "tshirts",
+            "price": 55,
+            "collection": "Streetwear",
+            "sizes": ["M", "L", "XL"],
+            "image": "/Images/tshirts/tshirt2.jpg",
+            "description": "Oversized fit for modern style"
+        },
+        {
+            "id": 11,
+            "title": "Pink Graphic T-shirt",
+            "category": "tshirts",
+            "price": 50,
+            "collection": "Summer Drop",
+            "sizes": ["S", "M", "L"],
+            "image": "/Images/tshirts/tshirt3.jfif",
+            "description": "Stylish graphic print t-shirt"
+        },
+        {
+            "id": 12,
+            "title": "Modern T-shirt",
+            "category": "tshirts",
+            "price": 45,
+            "collection": "Trendy",
+            "sizes": ["S", "M", "L"],
+            "image": "/Images/tshirts/tshirt4.avif",
+            "description": "Modern trendy t-shirt"
+        },
+        {
+            "id": 13,
+            "title": "Classic T-shirt",
+            "category": "tshirts",
+            "price": 42,
+            "collection": "Basics",
+            "sizes": ["S", "M", "L", "XL"],
+            "image": "/Images/tshirts/tshirt5.jpeg",
+            "description": "Classic everyday t-shirt"
+        },
+        {
+            "id": 14,
+            "title": "Casual T-shirt",
+            "category": "tshirts",
+            "price": 48,
+            "collection": "LN Exclusive",
+            "sizes": ["M", "L", "XL"],
+            "image": "/Images/tshirts/tshirt6.jpg",
+            "description": "Casual style t-shirt"
+        }
+    ],
+    "categories": [
+        { "id": 1, "name": "Bags" },
+        { "id": 2, "name": "T-shirts" }
+    ],
+    "contacts": {
+        "phone": "79340646",
+        "whatsapp": "79340646",
+        "viber": "79340646",
+        "socials": {
+            "facebook": "https://facebook.com/lnfashionbags",
+            "instagram": "https://instagram.com/lnfashionbags",
+            "tiktok": "https://tiktok.com/@lnfashionbags"
+        }
+    },
+    "menu": [
+        { "id": 1, "name": "მთავარი გვერდი", "patch": "/home" },
+        { "id": 2, "name": "პროდუქცია", "patch": "/products" },
+        { "id": 3, "name": "კატეგორიები", "patch": "/categories" },
+        { "id": 4, "name": "კონტაქტი", "patch": "/contact" }
+    ]
+}

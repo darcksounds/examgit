@@ -1,0 +1,99 @@
+.filter_section {
+    max-width: 1400px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 2rem;
+}
+
+.filter_parameters {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.filter_parameters_left {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.filter_parameters_right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.all_products,
+.bags,
+.t_shirts {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem 3rem;
+    border: 1px solid rgb(168, 167, 167);
+    border-radius: 2rem;
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    white-space: nowrap;
+    font-size: 1.4rem;
+}
+
+.price_filter {
+    padding: 1.8rem 2rem;
+    border: 1px solid rgb(168, 167, 167);
+    border-radius: 2rem;
+    background: white;
+    color: black;
+    font-size: 1.6rem;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.price_filter option {
+    background: white;
+    color: black;
+    padding: 10px;
+}
+
+.btn_active {
+    background: linear-gradient(90deg, rgb(255, 77, 141), #d4af37);
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .filter_parameters {
+        flex-direction: column;
+        gap: 1.5rem;
+        align-items: center;
+    }
+
+    .filter_parameters_left {
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    .filter_parameters_right {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .all_products,
+    .bags,
+    .t_shirts {
+        padding: 1.2rem 2rem;
+        font-size: 1.4rem;
+    }
+
+    .price_filter {
+        width: 100%;
+        text-align: center;
+    }
+}

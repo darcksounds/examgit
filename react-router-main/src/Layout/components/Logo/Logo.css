@@ -1,0 +1,30 @@
+.logo_box {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.desktop_logo {
+    width: 10rem;
+}
+
+.desktop_logo .logo {
+    width: 100%;
+    object-fit: cover;
+}
+
+.mobile_logo {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .desktop_logo {
+        display: none;
+    }
+
+    .mobile_logo {
+        display: flex;
+    }
+}
