@@ -1,7 +1,7 @@
 import { NavLink } from 'react-router'
 import '../Layout/Header.css'
 import { useEffect, useState } from 'react'
-import { API_URL } from '../config.js'
+import { supabase } from '../supabase.js'
 import Logo from '../Layout/components/Logo/Logo.jsx'
 import Search from '../Layout/components/Search/Search.jsx'
 import HeadSection from '../Layout/components/HeadSection/HeadSection.jsx'
@@ -12,9 +12,11 @@ function Header({ searchQuery, setSearchQuery }) {
 
     useEffect(() => {
         const getData = async () => {
-            const res = await fetch(`${API_URL}/menu`)
-            const data = await res.json()
-            setMenu(data)
+            const { data, error } = await supabase
+                .from('menu')
+                .select('*')
+            if (error) console.error(error)
+            setMenu(data || [])
         }
         getData()
     }, [])

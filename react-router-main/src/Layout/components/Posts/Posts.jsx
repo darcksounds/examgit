@@ -1,12 +1,13 @@
 import { Link } from 'react-router'
 import '../Posts/Posts.css'
 import { useEffect, useState } from 'react'
-
-const API_URL = 'http://localhost:3001'
+import { supabase } from '../../../supabase.js'
 
 async function fetchProducts() {
-    const res = await fetch(`${API_URL}/products`)
-    const data = await res.json()
+    const { data, error } = await supabase
+        .from('products')
+        .select('*')
+    if (error) console.error(error)
     return data
 }
 
@@ -14,7 +15,7 @@ function PostsSection({ activeCategory, sortPrice, searchQuery }) {
     const [posts, setPosts] = useState([])
 
     useEffect(() => {
-        fetchProducts().then(data => setPosts(data))
+        fetchProducts().then(data => setPosts(data || []))
     }, [])
 
     const filteredPosts = posts
@@ -50,7 +51,7 @@ function PostsSection({ activeCategory, sortPrice, searchQuery }) {
                     </div>
                     <div className='postCard_info'>
                         <h3>{post.title}</h3>
-                        {post.sizes && <p className='postCard_size'>Size: {post.sizes[0]}</p>}
+                        {post.sizes && <p className='postCard_size'>Size: {post.sizes}</p>}
                         <div className='postCard_bottom'>
                             <span className='postCard_price'>${post.price}</span>
                             <button className='postCard_cart'>🛒</button>
