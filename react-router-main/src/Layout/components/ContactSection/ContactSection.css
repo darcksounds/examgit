@@ -9,6 +9,7 @@
     font-size: 3.2rem;
     font-weight: 700;
     margin-bottom: 10px;
+    font-family: 'Playfair Display', serif;
 }
 
 .phone_text {
@@ -19,7 +20,7 @@
     color: #d4af37;
 }
 
-.contact_section p {
+.contact_section > p {
     font-size: 1.5rem;
     color: gray;
     margin-bottom: 30px;
@@ -30,13 +31,15 @@
     border-radius: 20px;
     padding: 40px;
     box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    background: white;
 }
 
 .contact_phone {
-    font-size: 3rem;
+    font-size: 3.5rem;
     font-weight: 700;
     color: rgb(255, 77, 141);
     margin-bottom: 24px;
+    letter-spacing: 2px;
 }
 
 .contact_buttons {
@@ -44,6 +47,7 @@
     justify-content: center;
     gap: 16px;
     margin-bottom: 20px;
+    flex-wrap: wrap;
 }
 
 .btn_call, .btn_whatsapp, .btn_viber {
@@ -54,7 +58,7 @@
     text-decoration: none;
     cursor: pointer;
     border: none;
-    transition: transform 0.2s ease;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .btn_call {
@@ -74,10 +78,26 @@
 
 .btn_call:hover, .btn_whatsapp:hover, .btn_viber:hover {
     transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 }
 
 .contact_available {
     font-size: 1.3rem;
     color: #aaa;
     margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+    .contact_section h2 {
+        font-size: 2.4rem;
+    }
+
+    .contact_card {
+        padding: 24px;
+    }
+
+    .btn_call, .btn_whatsapp, .btn_viber {
+        width: 100%;
+        text-align: center;
+    }
 }

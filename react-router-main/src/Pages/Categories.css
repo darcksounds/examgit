@@ -1,0 +1,87 @@
+.categories_page {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 60px 20px;
+}
+
+.categories_topic {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.categories_topic h2 {
+    font-size: 5rem;
+    font-weight: 700;
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 10px;
+}
+
+.categories_topic p {
+    font-size: 1.8rem;
+    color: gray;
+}
+
+.categories_grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.category_card {
+    text-decoration: none;
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.category_card_image {
+    height: 400px;
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.category_card:hover .category_card_image {
+    transform: scale(1.02);
+}
+
+.bags_bg {
+    background: linear-gradient(135deg, #f5e6d3, #e8c9a0);
+}
+
+.tshirts_bg {
+    background: linear-gradient(135deg, #fce4ec, #f8bbd0);
+}
+
+.category_card_overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 30px;
+    background: linear-gradient(0deg, rgba(0,0,0,0.5), transparent);
+    color: white;
+}
+
+.category_card_overlay h3 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.category_card_overlay span {
+    font-size: 1.6rem;
+    opacity: 0.9;
+}
+
+@media (max-width: 768px) {
+    .categories_grid {
+        grid-template-columns: 1fr;
+    }
+
+    .category_card_image {
+        height: 250px;
+    }
+
+    .categories_topic h2 {
+        font-size: 3.5rem;
+    }
+}

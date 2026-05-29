@@ -1,9 +1,11 @@
-function Contact(){
+import ContactSection from '../Layout/components/ContactSection/ContactSection.jsx'
+import './Contact.css'
+
+function Contact() {
     return (
-        <>
-        აქ განთავსდება საკონტაქტო გვერდის ინფორმაცია
-        </>
+        <div className='contact_page'>
+            <ContactSection />
+        </div>
     )
 }
-
-export default Contact;
+export default Contact

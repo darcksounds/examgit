@@ -44,7 +44,7 @@ function PostsSection({ activeCategory, sortPrice, searchQuery }) {
                 </p>
             )}
             {filteredPosts.map((post) => (
-                <div key={post.id} className='postCard'>
+                <Link key={post.id} to={`/products/${post.id}`} className='postCard'>
                     <div className='postCard_image'>
                         <span className='postCard_collection'>{post.collection}</span>
                         <img src={post.image} alt={post.title} />
@@ -57,7 +57,7 @@ function PostsSection({ activeCategory, sortPrice, searchQuery }) {
                             <button className='postCard_cart'>🛒</button>
                         </div>
                     </div>
-                </div>
+                </Link>
             ))}
         </div>
     )

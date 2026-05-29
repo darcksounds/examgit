@@ -1,4 +1,4 @@
-import { NavLink } from 'react-router'
+import { NavLink, Link, useLocation } from 'react-router'
 import '../Layout/Header.css'
 import { useEffect, useState } from 'react'
 import { supabase } from '../supabase.js'
@@ -9,6 +9,9 @@ import HeadSection from '../Layout/components/HeadSection/HeadSection.jsx'
 function Header({ searchQuery, setSearchQuery }) {
     const [menuData, setMenu] = useState([])
     const [menuOpen, setMenuOpen] = useState(false)
+    const location = useLocation()
+
+    const isHomePage = location.pathname === '/' || location.pathname === '/home'
 
     useEffect(() => {
         const getData = async () => {
@@ -25,7 +28,9 @@ function Header({ searchQuery, setSearchQuery }) {
         <>
             <header>
                 <div className="center_conteiner">
-                    <Logo />
+                    <Link to="/">
+                        <Logo />
+                    </Link>
                     <nav className={menuOpen ? 'open' : ''}>
                         {menuData.map(item => (
                             <NavLink
@@ -46,7 +51,7 @@ function Header({ searchQuery, setSearchQuery }) {
                     </button>
                 </div>
             </header>
-            <HeadSection />
+            {isHomePage && <HeadSection />}
         </>
     )
 }

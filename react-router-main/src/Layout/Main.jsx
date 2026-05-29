@@ -2,11 +2,18 @@ import '../Layout/Main.css'
 import Filter from '../Layout/components/Filter/Filter.jsx'
 import PostsSection from '../Layout/components/Posts/Posts.jsx'
 import ContactSection from '../Layout/components/ContactSection/ContactSection.jsx'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
+import { useSearchParams } from 'react-router'
 
-function Main({ searchQuery }) {
+function Main({ searchQuery, showContact = true }) {
     const [activeCategory, setActiveCategory] = useState('all')
     const [sortPrice, setSortPrice] = useState('default')
+    const [searchParams] = useSearchParams()
+
+    useEffect(() => {
+        const category = searchParams.get('category')
+        if (category) setActiveCategory(category)
+    }, [searchParams])
 
     return (
         <>
@@ -25,7 +32,11 @@ function Main({ searchQuery }) {
                 sortPrice={sortPrice}
                 searchQuery={searchQuery}
             />
-            <ContactSection />
+            {showContact && (
+                <div className='contact_wrapper'>
+                    <ContactSection />
+                </div>
+            )}
         </>
     )
 }
